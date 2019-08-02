@@ -81,7 +81,7 @@ def _impl(ctx):
       ctx.file._avro_tools,
     ]
 
-    ctx.actions.run(
+    ctx.actions.run_shell(
         inputs = inputs,
         outputs = [ctx.outputs.codegen],
         command = " && ".join(commands),
